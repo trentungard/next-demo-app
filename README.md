@@ -16,21 +16,33 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project is the first frontend to a project I'm doing where I make roughly the same application (or as close as I can get) in multiple frameworks/languages/libraries to compare and contrast them. Each project should show:
 
-## Learn More
+## State 
+	- initialization
+	- update performance 
+	- shared state (if possible)
 
-To learn more about Next.js, take a look at the following resources:
+## Data fetching
+	- caching data that won't often change (static generation that revalidates) 
+	- caching data that will change (server side generation that has caching + invalidation)
+	- build time data fetching
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Performance
+	- How quickly does a static page render in a prod build?
+	- How large is the bundle of a static page in a prod build?
+	- How quickly does a dynamic page render on first load (no cache)?
+	- How quickly does a dynamic page render on first load (cached)?
+	- How quickly does a massive page load (static or unstatic, cached or uncached).
+	- (Bonus) Can a page that depends on SEO leverage Server Side Rendering / another mechanism?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Styling
+	- How diverse are the styling options? 
+	- Does it support tailwind out of the box?
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Bonus
+	- Does the framework support static typing out of the box?
+	- Does the framework have an authentication solution?
+	- What else does the framework do?
